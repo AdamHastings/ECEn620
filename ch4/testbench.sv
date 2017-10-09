@@ -1,7 +1,7 @@
 `default_nettype none 
 `timescale 1 ns / 1 ps
 
-module testbench(my_mem_if.TEST if0)
+module testbench(my_mem_if.TEST if0);
 
 	// Delay half a clock cycle
 	integer clk_delay = 5;

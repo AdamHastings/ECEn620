@@ -1,6 +1,4 @@
 
-`default_nettype none
-
 module my_mem(my_mem_if.DUT if0);
 
   // Declare a 9-bit associative array using the logic data type
