@@ -198,7 +198,7 @@ module testbench(my_mem_if.TEST if0);
 			if0.write = 0;
 			if0.read = 1;
 			#clk_delay;
-			data_read_queue.push_back(data_out);
+			data_read_queue.push_back(if0.data_out);
 			#clk_delay;
 			i++;
 		end while (i < 6);
