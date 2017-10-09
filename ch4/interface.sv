@@ -6,10 +6,26 @@ interface my_mem_if(input bit clk);
 	logic [8:0] data_out;
 	logic [15:0] address;
 
+	logic parity;
+	assign parity = ^data_in;
+
+
+
+	// Block that generates errors whenever read == 1 and write == 1 at the same time
+	always @ (posedge read or posedge write)
+	begin
+		if (read == 1 && write == 1) begin
+				$error("read == 1 && write == 1");
+				rw_err_cnt++;
+		end
+	end
+
+
 	modport TEST (	output read, write, data_in, address,
 					input clk, data_out);
 
 	modport DUT (	output data_out,
 					input clk, read, write, data_in, address);
+
 
 endinterface : my_mem_if
