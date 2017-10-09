@@ -5,9 +5,7 @@ interface my_mem_if(input bit clk);
 	logic [7:0] data_in;
 	logic [8:0] data_out;
 	logic [15:0] address;
-
 	logic parity;
-	assign parity = ^data_in;
 
 	integer rw_err_cnt = 0;
 
@@ -27,6 +25,10 @@ interface my_mem_if(input bit clk);
 
 	modport DUT (	output data_out,
 					input clk, read, write, data_in, address, parity);
+
+	function bit getParity(input logic [7:0] d_in);
+		return  ˆd_in;
+	endfunction : getParity
 
 
 endinterface : my_mem_if

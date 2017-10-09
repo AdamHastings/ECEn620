@@ -6,9 +6,11 @@ module my_mem(my_mem_if.DUT if0);
 
   always @(posedge if0.clk) begin
     if (if0.write)
-      mem_array[if0.address] = {if0.parity, if0.data_in};
+      mem_array[if0.address] = {if0.getParity(if0.data_in), if0.data_in};
     else if (if0.read)
       if0.data_out =  mem_array[if0.address];
   end
 
 endmodule
+
+
