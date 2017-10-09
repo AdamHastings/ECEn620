@@ -27,7 +27,7 @@ interface my_mem_if(input bit clk);
 					input clk, read, write, data_in, address, parity);
 
 	function bit getParity(input logic [7:0] d_in);
-		return  ˆd_in;
+		return ^d_in;
 	endfunction : getParity
 
 
