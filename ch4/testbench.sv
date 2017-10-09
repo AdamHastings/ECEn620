@@ -115,6 +115,7 @@ module testbench(my_mem_if.TEST if0);
 		$display("--     R/W=1 errors found : %0d", if0.rw_err_cnt);
 		// $display("--      R/W=1 test status : %0s", rw_test_status);
 		$display("------------------------------------------------");
+		$stop;
 
 	end
 
