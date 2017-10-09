@@ -1,25 +1,25 @@
 `default_nettype none 
 `timescale 1 ns / 1 ps
 
-module testbench;
+module testbench(my_mem_if.TEST if0)
 
 	// Delay half a clock cycle
 	integer clk_delay = 5;
 
-	// Signals to be passed to DUT
-	bit clk=0;
-	bit write=0, read=0;
-	logic [7:0] data_in;
-	logic [15:0] address;
-	logic [8:0] data_out;
+	// // Signals to be passed to DUT
+	// bit clk=0;
+	// bit write=0, read=0;
+	// logic [7:0] data_in;
+	// logic [15:0] address;
+	// logic [8:0] data_out;
 
 	// Flag used to tell testbench if rw_test is running
-	bit rw_test_running = 0;
+	// bit rw_test_running = 0;
 
-	always
-	begin
-		#clk_delay clk = ~clk;
-	end
+	// always
+	// begin
+	// 	#clk_delay clk = ~clk;
+	// end
 
 	integer i = 0;
 	integer j = 0;
@@ -29,23 +29,23 @@ module testbench;
 	integer end_time;
 	integer seconds;
 
-	// Block that generates errors whenever read == 1 and write == 1 at the same time
-	always @ (posedge read or posedge write)
-	begin
-		if (read == 1 && write == 1) begin
-			if (!rw_test_running) begin
-				// // Uncomment to see r/w=1 error
-				// if (0)
-					$error("read == 1 && write == 1");
-			end
-			// // Uncomment to see r/w=1 error
-			// if (0)
-				rw_err_cnt++;
-		end
-	end
+	// // Block that generates errors whenever read == 1 and write == 1 at the same time
+	// always @ (posedge read or posedge write)
+	// begin
+	// 	if (read == 1 && write == 1) begin
+	// 		if (!rw_test_running) begin
+	// 			// // Uncomment to see r/w=1 error
+	// 			// if (0)
+	// 				$error("read == 1 && write == 1");
+	// 		end
+	// 		// // Uncomment to see r/w=1 error
+	// 		// if (0)
+	// 			rw_err_cnt++;
+	// 	end
+	// end
 
 
-	my_mem DUT_MY_MEM_0(.*);
+	// my_mem DUT_MY_MEM_0(.*);
 
 
 	// Data structures used by testbench
@@ -98,7 +98,7 @@ module testbench;
 		end while (i < 6);
 
 		// Test new added feature
-		rw_err_checker_test(rw_test_status);
+		// rw_err_checker_test(rw_test_status);
 		
 		// Compute total time taken
 		end_time = get_time();
@@ -118,85 +118,85 @@ module testbench;
 
 	end
 
-	bit test_read=0, test_write=0;
-	integer expected_rw_err_cnt=0;
-	integer rw_test_delay = 1000;
-	integer random_delay1, random_delay2;
+	// bit test_read=0, test_write=0;
+	// integer expected_rw_err_cnt=0;
+	// integer rw_test_delay = 1000;
+	// integer random_delay1, random_delay2;
 
 
-	always
-	begin
-		random_delay1 = $urandom_range(10,0);
-		#random_delay1 test_read = ~test_read;
-	end
+	// always
+	// begin
+	// 	random_delay1 = $urandom_range(10,0);
+	// 	#random_delay1 test_read = ~test_read;
+	// end
 
-	always
-	begin
-		random_delay2 = $urandom_range(10,0);
-		#random_delay2 test_write = ~test_write;
-	end
+	// always
+	// begin
+	// 	random_delay2 = $urandom_range(10,0);
+	// 	#random_delay2 test_write = ~test_write;
+	// end
 
-	always @ (posedge test_read or posedge test_write)
-	begin
-		if (test_read && test_write) begin
-			if (rw_test_running) begin
-				expected_rw_err_cnt++;
-			end
-		end
-	end
-
-
-	// Run this task to check the functionality of the read
-	task rw_err_checker_test(output string status);
+	// always @ (posedge test_read or posedge test_write)
+	// begin
+	// 	if (test_read && test_write) begin
+	// 		if (rw_test_running) begin
+	// 			expected_rw_err_cnt++;
+	// 		end
+	// 	end
+	// end
 
 
-		rw_test_running = 1;
-		pre_test_rw_err_cnt = rw_err_cnt;
-		rw_err_cnt = 0;
-		expected_rw_err_cnt = 0;
+	// // Run this task to check the functionality of the read
+	// task rw_err_checker_test(output string status);
 
-		// Make this assignment for this task only
-		assign read = test_read;
-		assign write = test_write;
 
-		// Run for specified amount of time
-		#rw_test_delay;
+	// 	rw_test_running = 1;
+	// 	pre_test_rw_err_cnt = rw_err_cnt;
+	// 	rw_err_cnt = 0;
+	// 	expected_rw_err_cnt = 0;
 
-		status = "PASS";
-		if (expected_rw_err_cnt != rw_err_cnt) begin
-			$error("rw_err_checker_test failed!");
-			$display("expected error count: %0d", expected_rw_err_cnt);
-			$display("observed error count : %0d", rw_err_cnt);
-			status = "FAIL";
-		end
+	// 	// Make this assignment for this task only
+	// 	assign if0.read = test_read;
+	// 	assign if0.write = test_write;
 
-		// Unassign read and write, since the test is over
-		assign read = 0;
-		assign write = 0;
-		rw_test_running = 0;
-	endtask
+	// 	// Run for specified amount of time
+	// 	#rw_test_delay;
+
+	// 	status = "PASS";
+	// 	if (expected_rw_err_cnt != rw_err_cnt) begin
+	// 		$error("rw_err_checker_test failed!");
+	// 		$display("expected error count: %0d", expected_rw_err_cnt);
+	// 		$display("observed error count : %0d", rw_err_cnt);
+	// 		status = "FAIL";
+	// 	end
+
+	// 	// Unassign read and write, since the test is over
+	// 	assign if0.read = 0;
+	// 	assign if0.write = 0;
+	// 	rw_test_running = 0;
+	// endtask
 
 	task test_traverse ();	  
 		#3;
 		// Put in values and read output
 		i = 0;
 	 	do begin
-			data_in = data_to_write_array[i];
-			address = address_array[i];
+			if0.data_in = data_to_write_array[i];
+			if0.address = address_array[i];
 			// // Uncomment to show how testbench handles DUT errors
 			// if (i == 3) begin
 			// 	data_in = 0;
 			// end
-			write = 1;
-			read = 0;
+			if0.write = 1;
+			if0.read = 0;
 			// Uncomment to show how testbench handles r/w=1 errors
 			// if (i < 4) begin
 			// 	read = 1;
 			// end
 			#clk_delay;
 			#clk_delay;
-			write = 0;
-			read = 1;
+			if0.write = 0;
+			if0.read = 1;
 			#clk_delay;
 			data_read_queue.push_back(data_out);
 			#clk_delay;
