@@ -1,0 +1,136 @@
+# vsim -c -novopt work.testbench 
+# //  Questa Sim-64
+# //  Version 10.1c linux_x86_64 Jul 27 2012
+# //
+# //  Copyright 1991-2012 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //
+# Refreshing /auto/fsb/adamh5/ECEn620/ch2_hw2/hw2/work.testbench
+# Loading sv_std.std
+# Loading work.testbench
+# Refreshing /auto/fsb/adamh5/ECEn620/ch2_hw2/hw2/work.my_mem
+# Loading work.my_mem
+# Data read Queue:
+#   -- read_write_array[0].read_data: 63
+#   -- read_write_array[1].read_data: 8d
+#   -- read_write_array[2].read_data: 81
+#   -- read_write_array[3].read_data: 13d
+#   -- read_write_array[4].read_data: 10d
+#   -- read_write_array[5].read_data: 12
+# 
+# 
+# RESULTS:
+# 
+# ------------------------------------------------
+# -- Elapsed time (s) : 0
+# -- Simulation time (ns) : 123
+# -- Read/Writes performed : 6
+# -- Errors found : 0
+# ------------------------------------------------
+# QuestaSim-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
+# -- Compiling module testbench
+# 
+# Top level modules:
+# 	testbench
+# Refreshing /auto/fsb/adamh5/ECEn620/ch2_hw2/hw2/work.testbench
+# Loading sv_std.std
+# Loading work.testbench
+# Loading work.my_mem
+# Data read Queue before shuffle:
+#   -- read_write_array[0].read_data: 81
+#   -- read_write_array[1].read_data: 63
+#   -- read_write_array[2].read_data: 8d
+#   -- read_write_array[3].read_data: 12
+#   -- read_write_array[4].read_data: 10d
+#   -- read_write_array[5].read_data: 13d
+# 
+# Data read Queue after shuffle:
+#   -- read_write_array[0].read_data: 63
+#   -- read_write_array[1].read_data: 8d
+#   -- read_write_array[2].read_data: 81
+#   -- read_write_array[3].read_data: 13d
+#   -- read_write_array[4].read_data: 10d
+#   -- read_write_array[5].read_data: 12
+# 
+# 
+# RESULTS:
+# 
+# ------------------------------------------------
+# -- Elapsed time (s) : 0
+# -- Simulation time (ns) : 123
+# -- Read/Writes performed : 6
+# -- Errors found : 0
+# ------------------------------------------------
+# [3;J[H[2J
+# Loading sv_std.std
+# Loading work.testbench
+# Loading work.my_mem
+# [3;J[H[2J
+# Data read Queue before shuffle:
+#   -- read_write_array[0].read_data: 81
+#   -- read_write_array[1].read_data: 63
+#   -- read_write_array[2].read_data: 8d
+#   -- read_write_array[3].read_data: 12
+#   -- read_write_array[4].read_data: 10d
+#   -- read_write_array[5].read_data: 13d
+# 
+# Data read Queue after shuffle:
+#   -- read_write_array[0].read_data: 63
+#   -- read_write_array[1].read_data: 8d
+#   -- read_write_array[2].read_data: 81
+#   -- read_write_array[3].read_data: 13d
+#   -- read_write_array[4].read_data: 10d
+#   -- read_write_array[5].read_data: 12
+# 
+# 
+# RESULTS:
+# 
+# ------------------------------------------------
+# -- Elapsed time (s) : 0
+# -- Simulation time (ns) : 123
+# -- Read/Writes performed : 6
+# -- Errors found : 0
+# ------------------------------------------------
+# QuestaSim-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
+# -- Compiling module testbench
+# 
+# Top level modules:
+# 	testbench
+# Refreshing /auto/fsb/adamh5/ECEn620/ch2_hw2/hw2/work.testbench
+# Loading sv_std.std
+# Loading work.testbench
+# Loading work.my_mem
+# [3;J[H[2J
+# Data read Queue before shuffle:
+#   -- read_write_array[0].read_data: 81
+#   -- read_write_array[1].read_data: 63
+#   -- read_write_array[2].read_data: 8d
+#   -- read_write_array[3].read_data: 0
+#   -- read_write_array[4].read_data: 10d
+#   -- read_write_array[5].read_data: 13d
+# 
+# Data read Queue after shuffle:
+#   -- read_write_array[0].read_data: 63
+#   -- read_write_array[1].read_data: 8d
+#   -- read_write_array[2].read_data: 81
+#   -- read_write_array[3].read_data: 13d
+#   -- read_write_array[4].read_data: 10d
+#   -- read_write_array[5].read_data: 0
+# 
+# ** Error: The following values are unequal at address x8465:
+#    Time: 123 ns  Scope: testbench File: testbench.sv Line: 82
+#   -- read_write_array[5].read_data = 0
+#   -- data_read_queue[5].expected_data = 12
+# 
+# RESULTS:
+# 
+# ------------------------------------------------
+# -- Elapsed time (s) : 0
+# -- Simulation time (ns) : 123
+# -- Read/Writes performed : 6
+# -- Errors found : 1
+# ------------------------------------------------

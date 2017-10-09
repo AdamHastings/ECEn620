@@ -1,0 +1,47 @@
+m255
+K3
+13
+cModel Technology
+Z0 d/fsb/adamh5/ECEn620/ch2_hw2/hw2
+vmy_mem
+Z1 DXx6 sv_std 3 std 0 22 F[19LRNL:5;XmIFh[XOPn1
+VI:GlQ`fQ<B3[=;IA=6TQF1
+r1
+31
+IYPWPEn1oV5KR45lijL`2z3
+S1
+Z2 d/fsb/adamh5/ECEn620/ch2_hw2/hw2
+w1506298552
+8dut.sv
+Fdut.sv
+L0 4
+Z3 OL;L;10.1c;51
+Z4 o-L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+!s108 1506806186.337234
+!s107 testbench.sv|dut.sv|
+!s90 dut.sv|testbench.sv|
+!s100 F@]j_^M4JP;E`T5^?NbT>2
+!s105 dut_sv_unit
+!s85 0
+!i10b 1
+vtestbench
+R1
+VhGfW:390DM[oDMzegDH9`2
+r1
+!s85 0
+31
+InZjiYj>j]CmiYj[H8n_:I0
+!s105 testbench_sv_unit
+S1
+R2
+w1506810132
+8testbench.sv
+Ftestbench.sv
+L0 4
+R3
+!s90 testbench.sv|
+R4
+!i10b 1
+!s100 [12`AKD7UNoCPHRP2M_2S0
+!s108 1506810136.994983
+!s107 testbench.sv|

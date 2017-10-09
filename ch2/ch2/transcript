@@ -1,0 +1,73 @@
+# //  Questa Sim-64
+# //  Version 10.1c linux_x86_64 Jul 27 2012
+# //
+# //  Copyright 1991-2012 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //
+# Loading project homework1
+# Compile of dut.sv was successful.
+# Compile of testbench.sv was successful.
+# 2 compiles, 0 failed with no errors. 
+vsim -novopt work.testbench
+# vsim -novopt work.testbench 
+# Refreshing /auto/fsb/adamh5/ECEn620/ch2/work.testbench
+# Loading sv_std.std
+# Loading work.testbench
+# Refreshing /auto/fsb/adamh5/ECEn620/ch2/work.my_mem
+# Loading work.my_mem
+add wave -position insertpoint  \
+sim:/testbench/address \
+sim:/testbench/address_array \
+sim:/testbench/clk \
+sim:/testbench/clk_delay \
+sim:/testbench/data_in \
+sim:/testbench/data_out \
+sim:/testbench/data_read_expect_assoc \
+sim:/testbench/data_read_queue \
+sim:/testbench/data_to_write_array \
+sim:/testbench/end_time \
+sim:/testbench/err_cnt \
+sim:/testbench/i \
+sim:/testbench/j \
+sim:/testbench/rdwt_cnt \
+sim:/testbench/read \
+sim:/testbench/seconds \
+sim:/testbench/start_time \
+sim:/testbench/temp_data \
+sim:/testbench/write
+# (vsim-4027) Logging is not supported for Dynamic Array item: /testbench/address_array 
+# (vsim-4027) Logging is not supported for Associative Array item: /testbench/data_read_expect_assoc 
+# (vsim-4027) Logging is not supported for Queue item: /testbench/data_read_queue 
+# (vsim-4027) Logging is not supported for Dynamic Array item: /testbench/data_to_write_array 
+run 200 ns
+# Data read Queue:
+#   -- data_read_queue[0]: 81
+#   -- data_read_queue[1]: 63
+#   -- data_read_queue[2]: 8d
+#   -- data_read_queue[3]: 0
+#   -- data_read_queue[4]: 10d
+#   -- data_read_queue[5]: 13d
+# 
+# ** Error: The following values are unequal:
+#    Time: 123 ns  Scope: testbench File: /auto/fsb/adamh5/ECEn620/ch2/testbench.sv Line: 55
+#   -- data_read_expect_assoc[8465] = 12
+#   -- data_read_queue[3] = 0
+# 
+# RESULTS:
+# 
+# ------------------------------------------------
+# -- Elapsed time (s) : 0
+# -- Simulation time (ns) : 123
+# -- Read/Writes performed : 6
+# -- Errors found : 1
+# ------------------------------------------------
+#  Trace back: wrong # args: should be "mti_popupinternal menu w"
+#     while executing
+# "mti_popupinternal .main_pane.wave.interior.cs.body.pw.wf.wavenameareapopup_popup "
+#     ("after" script) 
+#    <2: ::tkerror {wrong # args: should be "mti_popupinternal menu w"} 
+#    <1: ::bgerror {wrong # args: should be "mti_popupinternal menu w"} 

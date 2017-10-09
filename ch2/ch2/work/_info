@@ -1,0 +1,47 @@
+m255
+K3
+13
+cModel Technology
+d/fsb/adamh5/ECEn620/ch2/hw1
+vmy_mem
+Z0 DXx6 sv_std 3 std 0 22 F[19LRNL:5;XmIFh[XOPn1
+VI:GlQ`fQ<B3[=;IA=6TQF1
+r1
+!s85 0
+31
+ImQoEA<zG6Qo;X7E?0`BS83
+S1
+Z1 d/fsb/adamh5/ECEn620/ch2
+w1506298551
+8/auto/fsb/adamh5/ECEn620/ch2/dut.sv
+F/auto/fsb/adamh5/ECEn620/ch2/dut.sv
+L0 4
+Z2 OL;L;10.1c;51
+Z3 o-work work -sv -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+!s100 zF6CN?Dl2U@jo]`o6SSOW0
+!s105 dut_sv_unit
+!s90 -reportprogress|300|-work|work|-vopt|-sv|/auto/fsb/adamh5/ECEn620/ch2/dut.sv|
+!s108 1506365178.949824
+!s107 /auto/fsb/adamh5/ECEn620/ch2/dut.sv|
+!i10b 1
+vtestbench
+Z4 DXx6 sv_std 3 std 0 22 F[19LRNL:5;XmIFh[XOPn1
+VhGfW:390DM[oDMzegDH9`2
+r1
+31
+I6h[ZUXDT?UoeMbdOmm@Nb0
+S1
+R1
+w1506365049
+8/auto/fsb/adamh5/ECEn620/ch2/testbench.sv
+F/auto/fsb/adamh5/ECEn620/ch2/testbench.sv
+L0 4
+R2
+R3
+!s85 0
+!s105 testbench_sv_unit
+!i10b 1
+!s100 1nE8KgKP@Q0mS:<O1_S5l3
+!s108 1506365179.038851
+!s107 /auto/fsb/adamh5/ECEn620/ch2/testbench.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|/auto/fsb/adamh5/ECEn620/ch2/testbench.sv|

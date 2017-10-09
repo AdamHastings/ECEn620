@@ -1,0 +1,225 @@
+`default_nettype none 
+`timescale 1 ns / 1 ps
+
+module testbench;
+
+	integer clk_delay = 5;
+	integer clk_period = 10;
+
+	// Values to give DUT
+	bit clk=1;
+	bit reset=1;
+	bit write=0;
+	logic [15:0] data_in;
+	logic [ 2:0] address;
+	logic [15:0] data_out;
+
+	// Generate clock
+	always
+	begin
+		#clk_delay clk = ~clk;
+	end
+
+	// Instantiate module
+	config_reg DUT_CONFIG_REG_0(.*);
+
+	// Variables used by testbench
+	//integer i = 0, j = 0;
+	integer err_cnt = 0;
+	integer start_time = get_time();
+	integer end_time;
+	integer seconds;
+
+	// Typedef enum of register names
+	typedef enum {
+		adc0_reg=0,	
+		adc1_reg=1,
+		temp_sensor0_reg=2,
+		temp_sensor1_reg=3,
+		analog_test=4,
+		digital_test=5,
+		amp_gain=6,
+		digital_config=7
+	} reg_e;
+
+	// Associative array indexed by typedef reg_e to hold various register names
+	// logic [2:0] register_names [reg_e]; // uhh
+	reg_e register_names [logic[2:0]];
+	// logic[2:0] reg_names[reg_e];
+
+	// Associate array to hold the expected reset value for each register
+	logic [15:0] expected_reset_value[reg_e];
+
+	// Register file of modeled registers
+	logic [15:0] model_memory [7:0];
+	logic [15:0] read_memory [7:0];
+
+	bit [15:0] address_i;
+	bit [7:0]  data_i;
+	bit [8:0]  expected_data_i;
+
+	initial begin
+
+		init();
+
+		#clk_period;
+		#clk_period;
+		#2;
+
+		reset = 0;
+
+		#clk_period;
+
+
+		$display("\n============= Reset Test =============\n");
+		check_reset();
+		
+		#clk_period;
+
+		$display("\n=============  Bit Test  =============\n");
+		check_bits();
+
+
+		// Compute total time taken
+		end_time = get_time();
+		seconds = end_time - start_time;
+
+		$display("");
+		$display("RESULTS:");
+		$display("");
+		$display("------------------------------------------------");
+		$display("-- Elapsed time (s) : %0d", seconds);
+		$display("-- Simulation time (ns) : %0d", $time);
+		// $display("-- Read/Writes performed : %0d", rdwt_cnt);
+		$display("-- Errors found : %0d", err_cnt);
+		$display("------------------------------------------------");
+	end
+
+	// Initialize the testbench
+	task init();
+		// Initialize expected_reset_value
+		expected_reset_value[adc0_reg] = 16'hffff;
+		expected_reset_value[adc1_reg] = 16'h0;
+		expected_reset_value[temp_sensor0_reg] = 16'h0;
+		expected_reset_value[temp_sensor1_reg] = 16'h0;
+		expected_reset_value[analog_test] = 16'hABCD;
+		expected_reset_value[digital_test] = 16'h0;
+		expected_reset_value[amp_gain] = 16'h0;
+		expected_reset_value[7] = 16'h1;
+
+		register_names[0] = adc0_reg;
+		register_names[1] = adc1_reg;
+		register_names[2] = temp_sensor0_reg;
+		register_names[3] = temp_sensor1_reg;
+		register_names[4] = analog_test;
+		register_names[5] = digital_test;
+		register_names[6] = amp_gain;
+		register_names[7] = digital_config;
+
+		foreach (read_memory[i]) begin
+			address = i;
+			data_in = 0;
+			write = 1;
+			#clk_period;
+			read_memory[i] = data_out[i];
+			#clk_period;
+		end
+
+	endtask
+
+	// Check the if the reset works for each register
+	task check_reset();
+		foreach (model_memory[i]) begin
+			address = i;						// Set address
+			write = 1;							// Set write flag
+
+			model_memory[i] = 0;
+			data_in = expected_reset_value[reg_e'(i)];  // Reset
+
+			#clk_period;						// Wait until after next rising edge
+			write = 0;							// Get ready to read
+			#clk_period;
+			#clk_delay;
+			read_memory[i] = data_out;
+			compareMemories("Reset error");
+
+			#clk_delay;
+		end
+	endtask
+
+	logic [15:0] idx = 0;
+	task check_bits();
+		foreach (model_memory[i]) begin
+			idx = 16'h0001;
+			address = i;						// Set address
+			$display("\n========== address - %0d, idx = %0h", i, idx);
+			while (idx != 0) begin
+				// read/write pair
+				write = 1;							// Set write flag
+				model_memory[i] = idx;
+				data_in = idx;
+
+				#clk_period;						// Wait until after next rising edge
+				write = 0;							// Get ready to read
+
+				#clk_delay;
+				read_memory[i] = data_in;
+
+				compareMemories($sformatf("Bit write error at bit %0h", idx));
+
+				#clk_delay;
+			 	idx = idx << 1;
+			end
+		end
+	endtask
+
+	task compareMemories(input string error_message);
+		foreach (model_memory[i]) begin
+			if (read_memory[i] != model_memory[i]) begin
+				$error("read_memory[%s] != model_memory[%s]", register_names[i].name, register_names[i].name);
+				$display("   Error type: %s", error_message);
+				$display("   read_memory[%s]: 0x%0h", register_names[i].name, read_memory[i]);
+				$display("   model_memory[%d]: 0x%0h\n", register_names[i].name, model_memory[i]);
+			end
+		end
+	endtask
+
+	// task test_traverse ();
+	  
+	//   #3;
+	//   // Put in values and read output
+	//   for (i = 0; i < rdwt_cnt; i++) begin
+	//   	address = read_write_array[i].address;
+	// 	data_in = read_write_array[i].data;
+	// 	// Uncomment to show how testbench handles DUT errors
+	// 	if (i == 3) begin
+	// 		data_in = 0;
+	// 	end
+	// 	write = 1;
+	// 	read = 0;
+	// 	#clk_delay;
+	// 	#clk_delay;
+	// 	write = 0;
+	// 	read = 1;
+	// 	#clk_delay;
+	// 	read_write_array[i].read_data = data_out;
+	// 	#clk_delay;
+	//   end
+
+	// endtask
+
+	/* Get the current wall-clock time in seconds */
+	function integer get_time();
+		int file_pointer;
+		//Stores time and date to file sys_time
+		void'($system("date +%s > sys_time"));
+		//Open the file sys_time with read access
+		file_pointer = $fopen("sys_time","r");
+		//assin the value from file to variable
+		void'($fscanf(file_pointer,"%d",get_time));
+		//close the file
+		$fclose(file_pointer);
+		void'($system("rm sys_time"));
+	endfunction
+
+endmodule

@@ -1,0 +1,4 @@
+# vsim -do {run -all} -c Testbench.sv 
+# ** Error: (vsim-19) Failed to access library 'Testbench' at "Testbench".
+# No such file or directory. (errno = ENOENT)
+# Error loading design

@@ -1,0 +1,55 @@
+m255
+K3
+13
+cModel Technology
+Z0 d/fsb/adamh5/ECEn620/ch2/hw1
+T_opt
+V@HXd<jRMDl^aSZmlCB_Bg3
+04 6 4 work my_mem fast 0
+=1-000000000000-59c83d9d-357d9-1fb17
+o-quiet -auto_acc_if_foreign -work work
+n@_opt
+OL;O;10.1c;51
+Z1 d/fsb/adamh5/ECEn620/ch2/hw1
+vmy_mem
+Z2 DXx6 sv_std 3 std 0 22 F[19LRNL:5;XmIFh[XOPn1
+VI:GlQ`fQ<B3[=;IA=6TQF1
+r1
+!s85 0
+31
+I9=nkM>M>JW3e@W1@Dz>DJ1
+S1
+R1
+w1506215588
+8dut.sv
+Fdut.sv
+L0 3
+Z3 OL;L;10.1c;51
+Z4 !s108 1506300739.673896
+Z5 !s107 dut.sv|testbench.sv|
+Z6 !s90 testbench.sv|dut.sv|
+Z7 o-L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+!s105 dut_sv_unit
+!i10b 1
+!s100 RUKhNADd0k<7ULbEWY2<Q0
+vtestbench
+R2
+VhGfW:390DM[oDMzegDH9`2
+r1
+31
+IXW4RYG01W?RP=j9VhW;_B1
+S1
+R1
+w1506298374
+8testbench.sv
+Ftestbench.sv
+L0 4
+R3
+R4
+R5
+R6
+R7
+!s85 0
+!s100 _5YA>El8E_<BW]9Q?LBf_2
+!s105 testbench_sv_unit
+!i10b 1

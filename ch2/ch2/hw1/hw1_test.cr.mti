@@ -1,0 +1,15 @@
+/auto/fsb/adamh5/ECEn620/ch2/hw1/testbench.sv {1 {vlog -work work -vopt -sv /auto/fsb/adamh5/ECEn620/ch2/hw1/testbench.sv
+QuestaSim-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
+-- Compiling module testbench
+
+Top level modules:
+	testbench
+
+} {} {}} /auto/fsb/adamh5/ECEn620/ch2/hw1/dut.sv {1 {vlog -work work -vopt -sv /auto/fsb/adamh5/ECEn620/ch2/hw1/dut.sv
+QuestaSim-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
+-- Compiling module my_mem
+
+Top level modules:
+	my_mem
+
+} {} {}}

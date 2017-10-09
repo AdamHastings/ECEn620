@@ -1,0 +1,8 @@
+/auto/fsb/adamh5/ECEn620/ch2_hw2/hw3/config_reg_buggy_questa.svp {1 {vlog -work work2 -vopt -sv /auto/fsb/adamh5/ECEn620/ch2_hw2/hw3/config_reg_buggy_questa.svp
+QuestaSim-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
+-- Compiling module config_reg
+
+Top level modules:
+	config_reg
+
+} {} {}}

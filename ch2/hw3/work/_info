@@ -1,0 +1,47 @@
+m255
+K3
+13
+cModel Technology
+Z0 d/fsb/adamh5/ECEn620/ch2_hw2/hw3
+vconfig_reg
+Z1 DXx6 sv_std 3 std 0 22 F[19LRNL:5;XmIFh[XOPn1
+VkVojo`X9mlhV=[LfODhRW1
+r1
+!s85 0
+31
+ILVVPP^GUL2OTW=:namzgz2
+S1
+Z2 d/fsb/adamh5/ECEn620/ch2_hw2/hw3
+w1506812113
+8config_reg_buggy_questa.svp
+Fconfig_reg_buggy_questa.svp
+L0 21
+Z3 OL;L;10.1c;51
+Z4 !s108 1506890393.337485
+Z5 !s107 config_reg_buggy_questa.svp|testbench.sv|
+Z6 !s90 testbench.sv|config_reg_buggy_questa.svp|
+Z7 o-L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+!s100 J>Xdb@:nm:mC87FC71cJz3
+!s105 config_reg_buggy_questa_svp_unit
+!i10b 1
+vtestbench
+R1
+VhGfW:390DM[oDMzegDH9`2
+r1
+31
+IdAAfM09eV??BkMoGMMUM31
+S1
+R2
+w1506890389
+8testbench.sv
+Ftestbench.sv
+L0 4
+R3
+R4
+R5
+R6
+R7
+!s85 0
+!s105 testbench_sv_unit
+!i10b 1
+!s100 ZIGUQ]jVMA_;P4]HJz`LE0

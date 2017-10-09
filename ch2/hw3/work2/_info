@@ -1,0 +1,47 @@
+m255
+K3
+13
+cModel Technology
+d/auto/fsb/adamh5/ECEn620/ch2
+vconfig_reg
+Z0 DXx6 sv_std 3 std 0 22 F[19LRNL:5;XmIFh[XOPn1
+VkVojo`X9mlhV=[LfODhRW1
+r1
+!s85 0
+31
+ILVVPP^GUL2OTW=:namzgz2
+S1
+Z1 d/fsb/adamh5/ECEn620/ch2_hw2/hw3
+w1506812113
+8config_reg_buggy_questa.svp
+Fconfig_reg_buggy_questa.svp
+L0 21
+Z2 OL;L;10.1c;51
+Z3 !s108 1506970747.343775
+Z4 !s107 config_reg_buggy_questa.svp|testbench.sv|
+Z5 !s90 -reportprogress|300|testbench.sv|config_reg_buggy_questa.svp|
+Z6 o-L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+!s100 J>Xdb@:nm:mC87FC71cJz3
+!i10b 1
+!s105 config_reg_buggy_questa_svp_unit
+vtestbench
+Z7 DXx6 sv_std 3 std 0 22 F[19LRNL:5;XmIFh[XOPn1
+VhGfW:390DM[oDMzegDH9`2
+r1
+31
+I`bQM:DE>YW=o8i4RUYFl<0
+S1
+R1
+w1506970739
+8testbench.sv
+Ftestbench.sv
+L0 4
+R2
+R3
+R4
+R5
+R6
+!s85 0
+!s105 testbench_sv_unit
+!i10b 1
+!s100 5Zg>9bm4L_IW2Y8zH:8of2

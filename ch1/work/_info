@@ -1,0 +1,46 @@
+m255
+K3
+13
+cModel Technology
+d/auto/fsb/adamh5/LC3_sv
+vALU_4_bit
+Vif^nmo[33OT]lbX2nGOWf0
+r1
+!s85 0
+31
+If[ZLF^10c1XL6^02TO5FQ3
+Z0 d/auto/fsb/adamh5/ECEn620/ch1
+w1505843158
+8/auto/fsb/adamh5/ECEn620/ch1/ALU_4_bit.v
+F/auto/fsb/adamh5/ECEn620/ch1/ALU_4_bit.v
+L0 4
+Z1 OL;L;10.1c;51
+o-work work -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+n@a@l@u_4_bit
+!s100 h<hSIm=@[GMGIJBD09RYN1
+!s90 -reportprogress|300|-work|work|-vopt|/auto/fsb/adamh5/ECEn620/ch1/ALU_4_bit.v|
+!s108 1505856578.560704
+!s107 /auto/fsb/adamh5/ECEn620/ch1/ALU_4_bit.v|
+!i10b 1
+vTestbench
+DXx6 sv_std 3 std 0 22 F[19LRNL:5;XmIFh[XOPn1
+VGdUiEZgaMiVEi@bgHJeE13
+r1
+31
+I6nm^5HZ3M<SKT2=YjH7jh0
+S1
+Z2 d/auto/fsb/adamh5/ECEn620/ch1
+w1505856573
+8/auto/fsb/adamh5/ECEn620/ch1/Testbench.sv
+F/auto/fsb/adamh5/ECEn620/ch1/Testbench.sv
+L0 5
+R1
+o-work work -sv -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+n@testbench
+!s85 0
+!s105 Testbench_sv_unit
+!s90 -reportprogress|300|-work|work|-vopt|-sv|/auto/fsb/adamh5/ECEn620/ch1/Testbench.sv|
+!i10b 1
+!s100 @Ind1VOAF9k;an>JKG]ZR2
+!s108 1505856578.634428
+!s107 /auto/fsb/adamh5/ECEn620/ch1/Testbench.sv|

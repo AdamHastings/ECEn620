@@ -1,0 +1,8 @@
+/auto/fsb/adamh5/ECEn620/ch1/ALU_4_bit.v {1 {vlog -work work -vopt /auto/fsb/adamh5/ECEn620/ch1/ALU_4_bit.v
+QuestaSim-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
+-- Compiling module ALU_4_bit
+
+Top level modules:
+	ALU_4_bit
+
+} {} {}}
