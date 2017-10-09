@@ -9,6 +9,7 @@ interface my_mem_if(input bit clk);
 	logic parity;
 	assign parity = ^data_in;
 
+	integer rw_err_cnt;
 
 
 	// Block that generates errors whenever read == 1 and write == 1 at the same time
@@ -22,10 +23,10 @@ interface my_mem_if(input bit clk);
 
 
 	modport TEST (	output read, write, data_in, address,
-					input clk, data_out);
+					input clk, data_out, rw_err_cnt);
 
 	modport DUT (	output data_out,
-					input clk, read, write, data_in, address);
+					input clk, read, write, data_in, address, parity);
 
 
 endinterface : my_mem_if

@@ -112,8 +112,8 @@ module testbench(my_mem_if.TEST if0);
 		$display("--        Simulation time : %0d ns", $time);
 		$display("--  Read/Writes performed : %0d", rdwt_cnt);
 		$display("-- Data read errors found : %0d", err_cnt);
-		$display("--     R/W=1 errors found : %0d", pre_test_rw_err_cnt);
-		$display("--      R/W=1 test status : %0s", rw_test_status);
+		$display("--     R/W=1 errors found : %0d", if0.rw_err_cnt);
+		// $display("--      R/W=1 test status : %0s", rw_test_status);
 		$display("------------------------------------------------");
 
 	end
