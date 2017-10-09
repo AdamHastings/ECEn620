@@ -9,7 +9,7 @@ interface my_mem_if(input bit clk);
 	logic parity;
 	assign parity = ^data_in;
 
-	integer rw_err_cnt;
+	integer rw_err_cnt = 0;
 
 
 	// Block that generates errors whenever read == 1 and write == 1 at the same time
