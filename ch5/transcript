@@ -1,0 +1,104 @@
+# QuestaSim-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
+# -- Compiling module top
+# -- Compiling interface my_mem_if
+# -- Compiling program testbench
+# -- Importing package transaction_pkg
+# -- Compiling package transaction_pkg
+# -- Compiling module my_mem
+# 
+# Top level modules:
+# 	top
+# vsim -novopt work.top 
+# //  Questa Sim-64
+# //  Version 10.1c linux_x86_64 Jul 27 2012
+# //
+# //  Copyright 1991-2012 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //
+# Refreshing /auto/fsb/adamh5/ECEn620/ch5/work.top
+# Loading sv_std.std
+# Loading work.top
+# Refreshing /auto/fsb/adamh5/ECEn620/ch5/work.my_mem_if
+# Loading work.my_mem_if
+# Refreshing /auto/fsb/adamh5/ECEn620/ch5/work.my_mem
+# Loading work.my_mem
+# Refreshing /auto/fsb/adamh5/ECEn620/ch5/work.testbench
+# Refreshing /auto/fsb/adamh5/ECEn620/ch5/work.transaction_pkg
+# Loading work.transaction_pkg
+# Loading work.testbench
+# [3;J[H[2J
+# ** Error: read == 1 && write == 1
+#    Time: 450 ns  Scope: top.if0.rw_err File: interface.sv Line: 16
+# ** Error: read == 1 && write == 1
+#    Time: 550 ns  Scope: top.if0.rw_err File: interface.sv Line: 16
+# 
+# RESULTS:
+# 
+# ------------------------------------------------
+# --           Elapsed time : 0 s
+# --        Simulation time : 2350 ns
+# --  Read/Writes performed : 6
+# -- Data read errors found : 0
+# --     R/W=1 errors found : 2
+# ------------------------------------------------
+# Break in Module testbench at testbench.sv line 64
+# Stopped at testbench.sv line 64 
+# QuestaSim-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
+# -- Compiling module top
+# -- Compiling interface my_mem_if
+# -- Compiling program testbench
+# -- Importing package transaction_pkg
+# -- Compiling package transaction_pkg
+# -- Compiling module my_mem
+# 
+# Top level modules:
+# 	top
+# Refreshing /auto/fsb/adamh5/ECEn620/ch5/work.top
+# Loading sv_std.std
+# Loading work.top
+# Refreshing /auto/fsb/adamh5/ECEn620/ch5/work.my_mem_if
+# Loading work.my_mem_if
+# Refreshing /auto/fsb/adamh5/ECEn620/ch5/work.my_mem
+# Loading work.my_mem
+# Refreshing /auto/fsb/adamh5/ECEn620/ch5/work.testbench
+# Refreshing /auto/fsb/adamh5/ECEn620/ch5/work.transaction_pkg
+# Loading work.transaction_pkg
+# Loading work.testbench
+# QuestaSim-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
+# -- Compiling module top
+# -- Compiling interface my_mem_if
+# -- Compiling program testbench
+# -- Importing package transaction_pkg
+# -- Compiling package transaction_pkg
+# -- Compiling module my_mem
+# 
+# Top level modules:
+# 	top
+# Refreshing /auto/fsb/adamh5/ECEn620/ch5/work.top
+# Loading sv_std.std
+# Loading work.top
+# Refreshing /auto/fsb/adamh5/ECEn620/ch5/work.my_mem_if
+# Loading work.my_mem_if
+# Refreshing /auto/fsb/adamh5/ECEn620/ch5/work.my_mem
+# Loading work.my_mem
+# Refreshing /auto/fsb/adamh5/ECEn620/ch5/work.testbench
+# Refreshing /auto/fsb/adamh5/ECEn620/ch5/work.transaction_pkg
+# Loading work.transaction_pkg
+# Loading work.testbench
+# [3;J[H[2J
+# 
+# RESULTS:
+# 
+# ------------------------------------------------
+# --           Elapsed time : 0 s
+# --        Simulation time : 2350 ns
+# --  Read/Writes performed : 6
+# -- Data read errors found : 0
+# --     R/W=1 errors found : 0
+# ------------------------------------------------
+# Break in Module testbench at testbench.sv line 64
+# Stopped at testbench.sv line 64 

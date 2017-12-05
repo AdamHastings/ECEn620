@@ -1,0 +1,164 @@
+# //  Questa Sim-64
+# //  Version 10.1c linux_x86_64 Jul 27 2012
+# //
+# //  Copyright 1991-2012 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //
+vsim -novopt work.top
+# vsim -novopt work.top 
+# Loading sv_std.std
+# Loading work.top
+# Loading work.my_mem_if
+# Loading work.my_mem
+# Loading work.testbench
+add wave -position insertpoint  \
+sim:/top/clk
+add wave -position insertpoint  \
+sim:/top/if0/clk \
+sim:/top/if0/address \
+sim:/top/if0/data_in \
+sim:/top/if0/data_out \
+sim:/top/if0/parity \
+sim:/top/if0/read \
+sim:/top/if0/rw_err_cnt \
+sim:/top/if0/write
+add wave -position insertpoint  \
+sim:/top/d0/mem_array
+# (vsim-4027) Logging is not supported for Associative Array item: /top/d0/mem_array 
+add wave -position insertpoint  \
+sim:/top/t0/address_array \
+sim:/top/t0/clk_delay \
+sim:/top/t0/data_read_expect_assoc \
+sim:/top/t0/data_read_queue \
+sim:/top/t0/data_to_write_array \
+sim:/top/t0/end_time \
+sim:/top/t0/err_cnt \
+sim:/top/t0/i \
+sim:/top/t0/j \
+sim:/top/t0/pre_test_rw_err_cnt \
+sim:/top/t0/rdwt_cnt \
+sim:/top/t0/rw_err_cnt \
+sim:/top/t0/seconds \
+sim:/top/t0/start_time \
+sim:/top/t0/temp_data
+# (vsim-4027) Logging is not supported for Dynamic Array item: /top/t0/address_array 
+# (vsim-4027) Logging is not supported for Associative Array item: /top/t0/data_read_expect_assoc 
+# (vsim-4027) Logging is not supported for Queue item: /top/t0/data_read_queue 
+# (vsim-4027) Logging is not supported for Dynamic Array item: /top/t0/data_to_write_array 
+run -all
+# ** Error: read == 1 && write == 1
+#    Time: 3 ns  Scope: top.if0 File: interface.sv Line: 17
+# ** Error: read == 1 && write == 1
+#    Time: 23 ns  Scope: top.if0 File: interface.sv Line: 17
+# ** Error: read == 1 && write == 1
+#    Time: 43 ns  Scope: top.if0 File: interface.sv Line: 17
+# ** Error: read == 1 && write == 1
+#    Time: 63 ns  Scope: top.if0 File: interface.sv Line: 17
+# Data read Queue:
+#   -- data_read_queue[0]: 81
+#   -- data_read_queue[1]: 63
+#   -- data_read_queue[2]: 8d
+#   -- data_read_queue[3]: 12
+#   -- data_read_queue[4]: 10d
+#   -- data_read_queue[5]: 13d
+# 
+# 
+# RESULTS:
+# 
+# ------------------------------------------------
+# --           Elapsed time : 0 s
+# --        Simulation time : 133 ns
+# --  Read/Writes performed : 6
+# -- Data read errors found : 0
+# --     R/W=1 errors found : 4
+# ------------------------------------------------
+# Break in Module testbench at testbench.sv line 118
+restart -f
+# Loading sv_std.std
+# Loading work.top
+# Loading work.my_mem_if
+# Loading work.my_mem
+# Loading work.testbench
+run -all
+# ** Error: read == 1 && write == 1
+#    Time: 3 ns  Scope: top.if0 File: interface.sv Line: 17
+# ** Error: read == 1 && write == 1
+#    Time: 23 ns  Scope: top.if0 File: interface.sv Line: 17
+# ** Error: read == 1 && write == 1
+#    Time: 43 ns  Scope: top.if0 File: interface.sv Line: 17
+# ** Error: read == 1 && write == 1
+#    Time: 63 ns  Scope: top.if0 File: interface.sv Line: 17
+# Data read Queue:
+#   -- data_read_queue[0]: 81
+#   -- data_read_queue[1]: 63
+#   -- data_read_queue[2]: 8d
+#   -- data_read_queue[3]: 12
+#   -- data_read_queue[4]: 10d
+#   -- data_read_queue[5]: 13d
+# 
+# 
+# RESULTS:
+# 
+# ------------------------------------------------
+# --           Elapsed time : 0 s
+# --        Simulation time : 133 ns
+# --  Read/Writes performed : 6
+# -- Data read errors found : 0
+# --     R/W=1 errors found : 4
+# ------------------------------------------------
+# Break in Module testbench at testbench.sv line 118
+vlog top.sv interface.sv testbench.sv dut.sv
+# QuestaSim-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
+# -- Compiling module top
+# -- Compiling interface my_mem_if
+# -- Compiling module testbench
+# -- Compiling module my_mem
+# 
+# Top level modules:
+# 	top
+restart -f
+# Refreshing /auto/fsb/adamh5/ECEn620/ch4/work.top
+# Loading sv_std.std
+# Loading work.top
+# Refreshing /auto/fsb/adamh5/ECEn620/ch4/work.my_mem_if
+# Loading work.my_mem_if
+# Refreshing /auto/fsb/adamh5/ECEn620/ch4/work.my_mem
+# Loading work.my_mem
+# Refreshing /auto/fsb/adamh5/ECEn620/ch4/work.testbench
+# Loading work.testbench
+run -all
+# ** Error: read == 1 && write == 1
+#    Time: 3 ns  Scope: top.if0 File: interface.sv Line: 17
+# ** Error: read == 1 && write == 1
+#    Time: 23 ns  Scope: top.if0 File: interface.sv Line: 17
+# ** Error: read == 1 && write == 1
+#    Time: 43 ns  Scope: top.if0 File: interface.sv Line: 17
+# ** Error: read == 1 && write == 1
+#    Time: 63 ns  Scope: top.if0 File: interface.sv Line: 17
+# Data read Queue:
+#   -- data_read_queue[0]: 81
+#   -- data_read_queue[1]: 63
+#   -- data_read_queue[2]: 8d
+#   -- data_read_queue[3]: 0
+#   -- data_read_queue[4]: 10d
+#   -- data_read_queue[5]: 13d
+# 
+# ** Error: The following values are unequal:
+#    Time: 133 ns  Scope: top.t0 File: testbench.sv Line: 59
+#   -- data_read_expect_assoc[8465] = 12
+#   -- data_read_queue[3] = 0
+# 
+# RESULTS:
+# 
+# ------------------------------------------------
+# --           Elapsed time : 0 s
+# --        Simulation time : 133 ns
+# --  Read/Writes performed : 6
+# -- Data read errors found : 1
+# --     R/W=1 errors found : 4
+# ------------------------------------------------
+# Break in Module testbench at testbench.sv line 82

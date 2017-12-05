@@ -1,0 +1,53 @@
+//////////////////////////////////////////////////////////////////////////////////////////////
+// Purpose: Arbiter model for Chap_7_Threads_and_Interprocess_Communication/homework1_solution
+// Author: Greg Tumbush
+//
+// REVISION HISTORY:
+// $Log: arbiter_questa.vp,v $
+// Revision 1.1  2011/05/29 19:13:48  tumbush.tumbush
+// Check into cloud repository
+//
+// Revision 1.2  2011/03/18 20:13:30  Greg
+// Initial check-in
+//
+//////////////////////////////////////////////////////////////////////////////////////////////
+// Model for a 3-port arbiter using a round robin approach
+// to issuing grant. 
+// 1 Priority is maintained in a round robin format, i.e. port 0->port 1->port 2->port 0…   
+// 2 At reset the priority is port 0.
+// 3 Priority will be incremented whenever any grant is asserted
+// 4 Grant is combinatorial
+// 5 If a port with priority is not enabled or not currently requesting the next port will 
+// be given the grant given that port is enabled and requesting the bus, and so on.
+`default_nettype none
+  module arbiter(	 
+			 input wire clk,
+			 input wire reset,
+			 input wire req0,
+			 input wire req1,
+			 input wire req2,
+			 input wire en0,
+			 input wire en1,
+			 input wire en2,
+			 output reg grant0,
+			 output reg grant1,
+			 output reg grant2
+			 );
+   
+`protected
+    MTI!#ej>Q~1Gz,I2Qj!KC^X+Ee[iTok2*:!BEi]?Ku7~[JQ]7*mw=$!D#]>r#*aaQ2=a!zIDi2kj
+    CWIAAY_<B#z1C{n*o74#1!5}Mk['1w_J<]TC,q;AwvBi+Q;<+m**Am\K}?txIA7iromW}CUx!5wp
+    WEJNH5{$}!H5wl#5(wz~IB}-IlnYs*uG\e_p?-]oEbIPH{5#]1{2V\R?\X7DNf^#Y[R-C^wa11yR
+    ^jj$7rB1CsiV?O@t*;W1HrY;j^Z2+]xYen{DsVRlsJJWY2V2V;$=LQHsTt2T\n:~DiuJQJ?DDTr/
+    iQJZU,_uXVmv:=1i*-7s,FfB'^>}QJC2{5CJBl\G]op!_Z+aoTJk5JG=u5YQT~<<R2!{H$Ena}C6
+    U}<Uo]s>@{A3?t7jTGuX}CQR]~7WJC7Zl;kU+{nQWr.{>15iUGUn*mHCfk1,_j?O3i7?D\E=oO*7
+    Ql=7;{$Tk!o[i?7?{wX=\EZ-;(7j+WvZx[[,voB{oe^n!pklVmcK5=5$]Z*bwamZJ6>}AAp~_3rI
+    jGRl{~D+M@U@j=kHOeunEp#DO5oOR/xMT>WC5=<@e#~remB?$d*Cxw2[$5gv#$?D#w~BDp+*kT;I
+    nrZqOmAO+VG-~'Ep](EDi1=X-'q;*iD*&I#D#|R@w*Vv;[3$rrCzRD>7\}{5i7BJ^2lo,CACVlA<
+    ;D%]*o@7[l}mArYa={UC^XIxeOlriO\x{*Cz@JA];,\#-W#n]wkG*pKYpZon<TYmC2[CwR~lzH*7
+    oYe+[-}C|e}-,BzTuKT\m~}=!}]Z7;]~3GKQ;rJm~:[O2m-re$Rlw!$x_o55Vv-1o{X']Qe5Uojl
+    e;*Y_W}=v1emX7VH^;Q=#wx[3UT]D[^#1'wOK#r<
+`endprotected
+  
+   
+endmodule

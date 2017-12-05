@@ -1,0 +1,209 @@
+# //  Questa Sim-64
+# //  Version 10.1c linux_x86_64 Jul 27 2012
+# //
+# //  Copyright 1991-2012 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //
+vsim -novopt work.top
+# vsim -novopt work.top 
+# Loading sv_std.std
+# Loading work.top
+# Loading work.arb_if
+# Loading work.env_pkg
+# Loading work.test
+# Loading work.golden_module
+# Loading work.arbiter
+run -all
+# ** Error: grant_out[1] != arbif.grant[1]
+#    Time: 5 ns  Scope: top.grant1_err File: top.sv Line: 57
+# ** Error: grant_out[1] != arbif.grant[1]
+#    Time: 15 ns  Scope: top.grant1_err File: top.sv Line: 57
+# ** Error: grant_out[1] != arbif.grant[1]
+#    Time: 25 ns  Scope: top.grant1_err File: top.sv Line: 57
+# ** Error: grant_out[1] != arbif.grant[1]
+#    Time: 35 ns  Scope: top.grant1_err File: top.sv Line: 57
+# ** Error: grant_out[1] != arbif.grant[1]
+#    Time: 55 ns  Scope: top.grant1_err File: top.sv Line: 57
+# ** Error: grant_out[1] != arbif.grant[1]
+#    Time: 85 ns  Scope: top.grant1_err File: top.sv Line: 57
+# ** Error: grant_out[1] != arbif.grant[1]
+#    Time: 95 ns  Scope: top.grant1_err File: top.sv Line: 57
+# ** Error: grant_out[1] != arbif.grant[1]
+#    Time: 105 ns  Scope: top.grant1_err File: top.sv Line: 57
+# ** Error: grant_out[1] != arbif.grant[1]
+#    Time: 115 ns  Scope: top.grant1_err File: top.sv Line: 57
+# ** Error: grant_out[1] != arbif.grant[1]
+#    Time: 125 ns  Scope: top.grant1_err File: top.sv Line: 57
+# ** Error: grant_out[1] != arbif.grant[1]
+#    Time: 135 ns  Scope: top.grant1_err File: top.sv Line: 57
+# ** Error: grant_out[1] != arbif.grant[1]
+#    Time: 145 ns  Scope: top.grant1_err File: top.sv Line: 57
+# ** Error: grant_out[1] != arbif.grant[1]
+#    Time: 165 ns  Scope: top.grant1_err File: top.sv Line: 57
+# ** Error: grant_out[1] != arbif.grant[1]
+#    Time: 175 ns  Scope: top.grant1_err File: top.sv Line: 57
+# ** Error: grant_out[1] != arbif.grant[1]
+#    Time: 185 ns  Scope: top.grant1_err File: top.sv Line: 57
+# ** Error: grant_out[1] != arbif.grant[1]
+#    Time: 205 ns  Scope: top.grant1_err File: top.sv Line: 57
+# ** Error: grant_out[1] != arbif.grant[1]
+#    Time: 215 ns  Scope: top.grant1_err File: top.sv Line: 57
+# ** Error: grant_out[1] != arbif.grant[1]
+#    Time: 225 ns  Scope: top.grant1_err File: top.sv Line: 57
+# ** Error: grant_out[1] != arbif.grant[1]
+#    Time: 235 ns  Scope: top.grant1_err File: top.sv Line: 57
+# ** Error: grant_out[1] != arbif.grant[1]
+#    Time: 245 ns  Scope: top.grant1_err File: top.sv Line: 57
+# ** Error: grant_out[1] != arbif.grant[1]
+#    Time: 255 ns  Scope: top.grant1_err File: top.sv Line: 57
+# ** Error: grant_out[1] != arbif.grant[1]
+#    Time: 265 ns  Scope: top.grant1_err File: top.sv Line: 57
+# ** Error: grant_out[1] != arbif.grant[1]
+#    Time: 285 ns  Scope: top.grant1_err File: top.sv Line: 57
+# ** Error: grant_out[1] != arbif.grant[1]
+#    Time: 295 ns  Scope: top.grant1_err File: top.sv Line: 57
+# ** Error: grant_out[1] != arbif.grant[1]
+#    Time: 305 ns  Scope: top.grant1_err File: top.sv Line: 57
+# ** Error: grant_out[1] != arbif.grant[1]
+#    Time: 315 ns  Scope: top.grant1_err File: top.sv Line: 57
+# ** Error: grant_out[1] != arbif.grant[1]
+#    Time: 325 ns  Scope: top.grant1_err File: top.sv Line: 57
+# ** Error: grant_out[1] != arbif.grant[1]
+#    Time: 335 ns  Scope: top.grant1_err File: top.sv Line: 57
+# ** Error: grant_out[1] != arbif.grant[1]
+#    Time: 355 ns  Scope: top.grant1_err File: top.sv Line: 57
+# ** Error: grant_out[1] != arbif.grant[1]
+#    Time: 375 ns  Scope: top.grant1_err File: top.sv Line: 57
+# ** Error: grant_out[1] != arbif.grant[1]
+#    Time: 385 ns  Scope: top.grant1_err File: top.sv Line: 57
+# ** Error: grant_out[1] != arbif.grant[1]
+#    Time: 405 ns  Scope: top.grant1_err File: top.sv Line: 57
+# ** Error: grant_out[1] != arbif.grant[1]
+#    Time: 415 ns  Scope: top.grant1_err File: top.sv Line: 57
+# ** Error: grant_out[1] != arbif.grant[1]
+#    Time: 425 ns  Scope: top.grant1_err File: top.sv Line: 57
+# ** Error: grant_out[1] != arbif.grant[1]
+#    Time: 435 ns  Scope: top.grant1_err File: top.sv Line: 57
+# ** Error: grant_out[1] != arbif.grant[1]
+#    Time: 445 ns  Scope: top.grant1_err File: top.sv Line: 57
+# ** Error: grant_out[1] != arbif.grant[1]
+#    Time: 455 ns  Scope: top.grant1_err File: top.sv Line: 57
+# ** Error: grant_out[1] != arbif.grant[1]
+#    Time: 465 ns  Scope: top.grant1_err File: top.sv Line: 57
+# ** Error: grant_out[1] != arbif.grant[1]
+#    Time: 475 ns  Scope: top.grant1_err File: top.sv Line: 57
+# ** Error: grant_out[1] != arbif.grant[1]
+#    Time: 485 ns  Scope: top.grant1_err File: top.sv Line: 57
+# ** Error: grant_out[1] != arbif.grant[1]
+#    Time: 495 ns  Scope: top.grant1_err File: top.sv Line: 57
+# ** Error: grant_out[1] != arbif.grant[1]
+#    Time: 505 ns  Scope: top.grant1_err File: top.sv Line: 57
+# ** Error: grant_out[1] != arbif.grant[1]
+#    Time: 515 ns  Scope: top.grant1_err File: top.sv Line: 57
+# ** Error: grant_out[1] != arbif.grant[1]
+#    Time: 535 ns  Scope: top.grant1_err File: top.sv Line: 57
+# ** Error: grant_out[1] != arbif.grant[1]
+#    Time: 545 ns  Scope: top.grant1_err File: top.sv Line: 57
+# ** Error: grant_out[1] != arbif.grant[1]
+#    Time: 555 ns  Scope: top.grant1_err File: top.sv Line: 57
+# ** Error: grant_out[1] != arbif.grant[1]
+#    Time: 565 ns  Scope: top.grant1_err File: top.sv Line: 57
+# ** Error: grant_out[1] != arbif.grant[1]
+#    Time: 575 ns  Scope: top.grant1_err File: top.sv Line: 57
+# ** Error: grant_out[1] != arbif.grant[1]
+#    Time: 585 ns  Scope: top.grant1_err File: top.sv Line: 57
+# ** Error: grant_out[1] != arbif.grant[1]
+#    Time: 595 ns  Scope: top.grant1_err File: top.sv Line: 57
+# ** Error: grant_out[1] != arbif.grant[1]
+#    Time: 605 ns  Scope: top.grant1_err File: top.sv Line: 57
+# ** Error: grant_out[1] != arbif.grant[1]
+#    Time: 615 ns  Scope: top.grant1_err File: top.sv Line: 57
+# ** Error: grant_out[1] != arbif.grant[1]
+#    Time: 625 ns  Scope: top.grant1_err File: top.sv Line: 57
+# ** Error: grant_out[1] != arbif.grant[1]
+#    Time: 635 ns  Scope: top.grant1_err File: top.sv Line: 57
+# ** Error: grant_out[1] != arbif.grant[1]
+#    Time: 645 ns  Scope: top.grant1_err File: top.sv Line: 57
+# ** Error: grant_out[1] != arbif.grant[1]
+#    Time: 655 ns  Scope: top.grant1_err File: top.sv Line: 57
+# ** Error: grant_out[1] != arbif.grant[1]
+#    Time: 665 ns  Scope: top.grant1_err File: top.sv Line: 57
+# ** Error: grant_out[1] != arbif.grant[1]
+#    Time: 675 ns  Scope: top.grant1_err File: top.sv Line: 57
+# ** Error: grant_out[1] != arbif.grant[1]
+#    Time: 685 ns  Scope: top.grant1_err File: top.sv Line: 57
+# ** Error: grant_out[1] != arbif.grant[1]
+#    Time: 695 ns  Scope: top.grant1_err File: top.sv Line: 57
+# ** Error: grant_out[1] != arbif.grant[1]
+#    Time: 705 ns  Scope: top.grant1_err File: top.sv Line: 57
+# ** Error: grant_out[1] != arbif.grant[1]
+#    Time: 715 ns  Scope: top.grant1_err File: top.sv Line: 57
+# ** Error: grant_out[1] != arbif.grant[1]
+#    Time: 725 ns  Scope: top.grant1_err File: top.sv Line: 57
+# ** Error: grant_out[1] != arbif.grant[1]
+#    Time: 735 ns  Scope: top.grant1_err File: top.sv Line: 57
+# ** Error: grant_out[1] != arbif.grant[1]
+#    Time: 745 ns  Scope: top.grant1_err File: top.sv Line: 57
+# ** Error: grant_out[1] != arbif.grant[1]
+#    Time: 765 ns  Scope: top.grant1_err File: top.sv Line: 57
+# ** Error: grant_out[1] != arbif.grant[1]
+#    Time: 775 ns  Scope: top.grant1_err File: top.sv Line: 57
+# ** Error: grant_out[1] != arbif.grant[1]
+#    Time: 795 ns  Scope: top.grant1_err File: top.sv Line: 57
+# ** Error: grant_out[1] != arbif.grant[1]
+#    Time: 815 ns  Scope: top.grant1_err File: top.sv Line: 57
+# ** Error: grant_out[1] != arbif.grant[1]
+#    Time: 845 ns  Scope: top.grant1_err File: top.sv Line: 57
+# ** Error: grant_out[1] != arbif.grant[1]
+#    Time: 855 ns  Scope: top.grant1_err File: top.sv Line: 57
+# ** Error: grant_out[1] != arbif.grant[1]
+#    Time: 885 ns  Scope: top.grant1_err File: top.sv Line: 57
+# ** Error: grant_out[1] != arbif.grant[1]
+#    Time: 905 ns  Scope: top.grant1_err File: top.sv Line: 57
+# ** Error: grant_out[1] != arbif.grant[1]
+#    Time: 915 ns  Scope: top.grant1_err File: top.sv Line: 57
+# ** Error: grant_out[1] != arbif.grant[1]
+#    Time: 925 ns  Scope: top.grant1_err File: top.sv Line: 57
+# ** Error: grant_out[1] != arbif.grant[1]
+#    Time: 935 ns  Scope: top.grant1_err File: top.sv Line: 57
+# ** Error: grant_out[1] != arbif.grant[1]
+#    Time: 945 ns  Scope: top.grant1_err File: top.sv Line: 57
+# ** Error: grant_out[1] != arbif.grant[1]
+#    Time: 955 ns  Scope: top.grant1_err File: top.sv Line: 57
+# ** Error: grant_out[1] != arbif.grant[1]
+#    Time: 965 ns  Scope: top.grant1_err File: top.sv Line: 57
+# ** Error: grant_out[1] != arbif.grant[1]
+#    Time: 975 ns  Scope: top.grant1_err File: top.sv Line: 57
+# ** Error: grant_out[1] != arbif.grant[1]
+#    Time: 985 ns  Scope: top.grant1_err File: top.sv Line: 57
+# ** Error: grant_out[1] != arbif.grant[1]
+#    Time: 1005 ns  Scope: top.grant1_err File: top.sv Line: 57
+# ** Error: grant_out[1] != arbif.grant[1]
+#    Time: 1015 ns  Scope: top.grant1_err File: top.sv Line: 57
+# ** Error: grant_out[1] != arbif.grant[1]
+#    Time: 1025 ns  Scope: top.grant1_err File: top.sv Line: 57
+# ** Error: grant_out[1] != arbif.grant[1]
+#    Time: 1035 ns  Scope: top.grant1_err File: top.sv Line: 57
+# ** Error: grant_out[1] != arbif.grant[1]
+#    Time: 1055 ns  Scope: top.grant1_err File: top.sv Line: 57
+# ** Error: grant_out[1] != arbif.grant[1]
+#    Time: 1065 ns  Scope: top.grant1_err File: top.sv Line: 57
+# ** Error: grant_out[1] != arbif.grant[1]
+#    Time: 1075 ns  Scope: top.grant1_err File: top.sv Line: 57
+# ** Error: grant_out[1] != arbif.grant[1]
+#    Time: 1095 ns  Scope: top.grant1_err File: top.sv Line: 57
+# ** Error: grant_out[1] != arbif.grant[1]
+#    Time: 1105 ns  Scope: top.grant1_err File: top.sv Line: 57
+# 
+# RESULTS:
+# 
+# ------------------------------------------------
+# --     Elapsed time : 0 s
+# --  Simulation time : 1110000 ns
+# --     Errors found : 90
+# ------------------------------------------------
+# Break in Task printResults at test.sv line 62

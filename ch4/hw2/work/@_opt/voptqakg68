@@ -1,0 +1,96 @@
+m255
+K3
+13
+cModel Technology
+Z0 d/fsb/adamh5/ECEn620/ch4/hw2
+T_opt
+V9IDjgCQ9jE[O6:M4KTLZF3
+04 6 4 work my_mem fast 0
+=1-000000000000-59e50bed-d9b6b-10308
+o-quiet -auto_acc_if_foreign -work work
+n@_opt
+OL;O;10.1c;51
+vmy_mem
+Z1 DXx6 sv_std 3 std 0 22 F[19LRNL:5;XmIFh[XOPn1
+V=:X`Yz0eVndec8UQS=HmG1
+r1
+31
+IHe2Cfdfm[[:b]:nW_Q?U33
+S1
+Z2 d/fsb/adamh5/ECEn620/ch4/hw2
+w1508179253
+8dut.sv
+Fdut.sv
+L0 3
+Z3 OL;L;10.1c;51
+Z4 !s108 1508182764.069313
+Z5 !s107 dut.sv|testbench.sv|interface.sv|top.sv|
+Z6 !s90 -reportprogress|300|top.sv|interface.sv|testbench.sv|dut.sv|
+Z7 o-L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+!s85 0
+!s100 :?lE:lb9Ai>Loi@MY;1IL0
+!s105 dut_sv_unit
+!i10b 1
+Ymy_mem_if
+R1
+VkThk4``BAIUW@<KFVSfBd1
+r1
+31
+I13BgBz3ZF[[Y6K2g90@cf2
+S1
+R2
+w1508182751
+8interface.sv
+Finterface.sv
+L0 3
+R3
+R4
+R5
+R6
+R7
+!s85 0
+!s105 interface_sv_unit
+!i10b 1
+!s100 b6ffT`S4cJR<3KUl_3`>81
+4testbench
+R1
+VhGfW:390DM[oDMzegDH9`2
+r1
+31
+ISIjYVN^QFY2H82ML?4jE52
+S1
+R2
+w1508129153
+8testbench.sv
+Ftestbench.sv
+L0 6
+R3
+R4
+R5
+R6
+R7
+!s85 0
+!s100 J=4:Ci=W0fkIg[N:R@>f23
+!s105 testbench_sv_unit
+!i10b 1
+vtop
+R1
+Ve:gFW1CKLAXc^T:7k2HoD1
+r1
+31
+IJ6LfEUm;@Na]LMbBfZDI82
+S1
+R2
+w1508118756
+8top.sv
+Ftop.sv
+L0 3
+R3
+R4
+R5
+R6
+R7
+!s85 0
+!s100 DE]15i`FSHM=1lI8gmA7X2
+!s105 top_sv_unit
+!i10b 1
