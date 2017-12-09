@@ -4,8 +4,10 @@ module top;
 	bit clk;
 	Clock_Unit cu0(clk);
 
+	parameter ADDRESS_WIDTH = 8;
+
 	// Create interface
-	risc_spm_iface if0(clk);
+	risc_spm_iface #(ADDRESS_WIDTH) if0(clk);
 
 	// Instantiate DUT
 	RISC_SPM rspm0(
@@ -17,6 +19,6 @@ module top;
 		.write(if0.write)
 	);
 
-	test t0(if0.TEST);
+	test #(ADDRESS_WIDTH) t0();
 
 endmodule

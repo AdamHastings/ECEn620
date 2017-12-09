@@ -1,4 +1,4 @@
-interface risc_spm_iface(input bit clk);
+interface risc_spm_iface #(ADDRESS_WIDTH=8) (input bit clk);
 
 	logic [7:0] Bus_1, address;
 	logic write;

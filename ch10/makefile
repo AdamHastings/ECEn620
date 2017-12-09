@@ -1,4 +1,4 @@
-VERILOG_FILES = opcodes_include.v Control_Unit.v Clock_Unit.v mux5_1.v mux3_1.v Alu_RISC.v Register_Unit.v Processing_Unit.v RISC_SPM.v risc_spm_iface.sv env_pkg.sv test.sv top.sv
+VERILOG_FILES = opcodes_include.v Control_Unit.v Clock_Unit.v mux5_1.v mux3_1.v Alu_RISC.v Register_Unit.v Processing_Unit.v RISC_SPM.v Transaction_pkg.sv Generator_pkg.sv Agent_pkg.sv Driver_pkg.sv CovPort_pkg.sv risc_spm_iface.sv Environment_pkg.sv test.sv top.sv
 # VHDL_FILES = package_timing.vhd package_utility.vhd async.vhd
 TOPLEVEL = top
 
