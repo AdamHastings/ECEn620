@@ -5,10 +5,9 @@ program automatic test();
 	//import CovPort_pkg::*;
 	import Transaction_pkg::*;
 	Environment #(ADDRESS_WIDTH) env;
-	Driver_cbs_cov #(ADDRESS_WIDTH) dcc;
 	Transaction #(ADDRESS_WIDTH) drv_tr;
 
-		covergroup CovPort (int ADDRESS_WIDTH);
+	covergroup CovPort (int ADDRESS_WIDTH);
 		non_ctrl_opcodes : coverpoint $root.top.t0.drv_tr.opcode {
 			option.comment = "All opcodes have been executed, except BR, BRZ, and HALT";
 			bins nop_bin = {NOP};
@@ -99,6 +98,8 @@ program automatic test();
 		endtask
 
 	endclass
+
+	Driver_cbs_cov #(ADDRESS_WIDTH) dcc;
 
 	initial begin
 		env = new();
