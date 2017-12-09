@@ -3,7 +3,7 @@ program automatic test();
 	parameter ADDRESS_WIDTH = 8;
 	import env_pkg::*;
 	import CovPort_pkg::*;
-	Environment env;
+	Environment #(ADDRESS_WIDTH) env;
 	Driver_cbs_cov dcc;
 
 	initial begin

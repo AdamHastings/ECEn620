@@ -11,7 +11,7 @@ package env_pkg;
 	// Environment class
 	//////////////////////////////////////////////////////////
 
-	class Environment;
+	class Environment #(ADDRESS_WIDTH);
 		Generator 	gen;
 		Agent 		agt;
 		Driver		drv;
