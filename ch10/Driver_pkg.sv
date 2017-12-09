@@ -21,7 +21,7 @@ package Driver_pkg;
 		event agt_drv_handshake;
 		string ASCII_op = "";
 		Driver_cbs #(ADDRESS_WIDTH) cbs[$];
-		virtual risc_spm_iface.TEST vif0;
+		virtual risc_spm_iface #(ADDRESS_WIDTH).TEST vif0;
 
 
 		function new(input mailbox #(Transaction #(ADDRESS_WIDTH)) agt2drv, event agt_drv_handshake, input virtual risc_spm_iface #(ADDRESS_WIDTH).TEST vif0);
