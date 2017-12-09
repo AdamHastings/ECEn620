@@ -1,5 +1,6 @@
-program #(ADDRESS_WIDTH) automatic test();
+program automatic test();
 
+	parameter ADDRESS_WIDTH = 8;
 	import env_pkg::*;
 	import CovPort_pkg::*;
 	Environment env;
