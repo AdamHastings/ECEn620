@@ -5,7 +5,7 @@ program automatic test();
 	import CovPort_pkg::*;
 	// import Transaction_pkg::*;
 	Environment #(ADDRESS_WIDTH) env;
-	Transaction #(ADDRESS_WIDTH) drv_tr;
+	// Transaction #(ADDRESS_WIDTH) drv_tr;
 
 	// covergroup CovPort (int ADDRESS_WIDTH);
 	// 	non_ctrl_opcodes : coverpoint $root.top.t0.drv_tr.opcode {
