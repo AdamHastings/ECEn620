@@ -5,11 +5,7 @@ package env_pkg;
 	import Generator_pkg::*;
 	import Agent_pkg::*;
 	import Driver_pkg::*;
-
-
-	//////////////////////////////////////////////////////////
-	// Environment class
-	//////////////////////////////////////////////////////////
+	
 
 	class Environment #(ADDRESS_WIDTH);
 		Generator 	#(ADDRESS_WIDTH) gen;
