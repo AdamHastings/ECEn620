@@ -4,7 +4,7 @@ module top;
 	bit clk;
 	Clock_Unit cu0(clk);
 
-	parameter ADDRESS_WIDTH = 8;
+	parameter ADDRESS_WIDTH = 9;
 
 	// Create interface
 	risc_spm_iface #(ADDRESS_WIDTH) if0(clk);
