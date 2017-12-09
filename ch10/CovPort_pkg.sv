@@ -86,7 +86,7 @@ package CovPort_pkg;
 		CovPort ck;
 
 		function new();
-			ck = new();
+			ck = new(ADDRESS_WIDTH);
 		endfunction
 
 		virtual task pre_tx(ref Transaction #(ADDRESS_WIDTH) tr);
