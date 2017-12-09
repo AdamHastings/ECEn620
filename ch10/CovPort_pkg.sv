@@ -4,10 +4,10 @@ package CovPort_pkg;
 	import Transaction_pkg::*;
 	import Driver_pkg::*;
 
-	Transaction #(ADDRESS_WIDTH=8) drv_tr;
+	//Transaction #(ADDRESS_WIDTH) drv_tr;
 
 	covergroup CovPort (int ADDRESS_WIDTH);
-		non_ctrl_opcodes : coverpoint drv_tr.opcode {
+		non_ctrl_opcodes : coverpoint $root.top.test.drv_tr.opcode {
 			option.comment = "All opcodes have been executed, except BR, BRZ, and HALT";
 			bins nop_bin = {NOP};
 			bins add_bin = {ADD};
@@ -20,7 +20,7 @@ package CovPort_pkg;
 			bins misc = default;
 		}
 
-		src_opcodes : coverpoint drv_tr.opcode {
+		src_opcodes : coverpoint $root.top.test.drv_tr.opcode {
 			option.comment = "The source for every opcode that has a source has been R0, R1, R2, and R3";
 			bins add_bin = {ADD};
 			bins sub_bin = {SUB};
@@ -31,7 +31,7 @@ package CovPort_pkg;
 	
 		}
 
-		dst_opcodes : coverpoint drv_tr.opcode {
+		dst_opcodes : coverpoint $root.top.test.drv_tr.opcode {
 			option.comment = "The destination for every opcode that has a source has been R0, R1, R2, and R3";
 			bins add_bin = {ADD};
 			bins sub_bin = {SUB};
@@ -42,13 +42,13 @@ package CovPort_pkg;
 			bins misc = default;		
 		}
 
-		transition_permutations : coverpoint drv_tr.opcode {
+		transition_permutations : coverpoint $root.top.test.drv_tr.opcode {
 			option.comment = "Every opcode has been preceded and followed by every other instruction.";
 			bins t1[] = (NOP, ADD, SUB, AND, NOT, RD, WR, RDI => NOP, ADD, SUB, AND, NOT, RD, WR, RDI);
 			bins misc = default;
 		}
 
-		src_dst_opcodes : coverpoint drv_tr.opcode {
+		src_dst_opcodes : coverpoint $root.top.test.drv_tr.opcode {
 			option.comment = "For opcodes that have both a source and destination, all permutations of source and destination have been executed.";
 			bins add_bin = {ADD};
 			bins sub_bin = {SUB};
@@ -57,19 +57,19 @@ package CovPort_pkg;
 			bins misc = default;
 		}
 
-		all_mem_written : coverpoint drv_tr.opcode {
+		all_mem_written : coverpoint $root.top.test.drv_tr.opcode {
 			option.comment = "All memory locations have been written.";
 			bins wr_bin = {WR};
 			bins misc = default;
 		}
 
-		all_mem_read : coverpoint drv_tr.opcode {
+		all_mem_read : coverpoint $root.top.test.drv_tr.opcode {
 			option.comment = "All memory locations have been read by a RD instruction.";
 			bins rd_bin = {RD};
 			bins misc = default;
 		}
 
-		address_cov : coverpoint drv_tr.address {
+		address_cov : coverpoint $root.top.test.drv_tr.address {
 			option.auto_bin_max = 1 << (ADDRESS_WIDTH);
 		}
 
@@ -90,7 +90,7 @@ package CovPort_pkg;
 		endfunction
 
 		virtual task pre_tx(ref Transaction #(ADDRESS_WIDTH) tr);
-			drv_tr = tr;
+			$root.top.test.drv_tr = tr;
 			ck.sample();
 			$display("%0d", $get_coverage());
 			if ($get_coverage() == 100) $stop;
