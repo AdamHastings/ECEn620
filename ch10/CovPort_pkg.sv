@@ -73,9 +73,9 @@ package CovPort_pkg;
 			option.auto_bin_max = 1 << (ADDRESS_WIDTH);
 		}
 
-		cross src_opcodes, drv_tr.src;
-		cross dst_opcodes, drv_tr.dst;
-		cross src_dst_opcodes, drv_tr.src, drv_tr.dst;
+		cross src_opcodes, $root.top.test.drv_tr.src;
+		cross dst_opcodes, $root.top.test.drv_tr.dst;
+		cross src_dst_opcodes, $root.top.test.drv_tr.src, $root.top.test.drv_tr.dst;
 		cross all_mem_written, address_cov;
 		cross all_mem_read, address_cov;
 
