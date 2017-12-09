@@ -19,6 +19,6 @@ module top;
 		.write(if0.write)
 	);
 
-	test #(.ADDRES_WIDTH(ADDRESS_WIDTH)) t0();
+	test #(.ADDRESS_WIDTH(ADDRESS_WIDTH)) t0();
 
 endmodule
