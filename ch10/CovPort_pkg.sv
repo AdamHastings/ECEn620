@@ -4,7 +4,7 @@ package CovPort_pkg;
 	import Transaction_pkg::*;
 	import Driver_pkg::*;
 
-	Transaction #(ADDRESS_WIDTH) drv_tr;
+	Transaction #(ADDRESS_WIDTH=8) drv_tr;
 
 	covergroup CovPort (int ADDRESS_WIDTH);
 		non_ctrl_opcodes : coverpoint drv_tr.opcode {
