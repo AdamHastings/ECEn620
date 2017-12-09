@@ -2,11 +2,11 @@ package Transaction_pkg;
 
 	`include "opcodes_include.v"
 
-	class Transaction;
+	class Transaction #(ADDRESS_WIDTH);
 
 		rand bit [3:0] opcode;
 		rand bit [1:0] src, dst;
-		rand bit [7:0] address;
+		rand bit [ADDRESS_WIDTH-1:0] address;
 
 		// bit [7:0] instr = {opcode, src, dst};
 		bit [7:0] instr;

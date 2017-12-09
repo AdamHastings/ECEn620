@@ -2,13 +2,13 @@ package Agent_pkg;
 
 	import Transaction_pkg::*;
 
-	class Agent;
+	class Agent #(ADDRESS_WIDTH);
 
-		mailbox #(Transaction) gen2agt, agt2drv;
+		mailbox #(Transaction #(ADDRESS_WIDTH)) gen2agt, agt2drv;
 		event gen_agt_handshake, agt_drv_handshake;
-		Transaction tr;
+		Transaction #(ADDRESS_WIDTH) tr;
 
-		function new(input mailbox #(Transaction) gen2agt, agt2drv, event gen_agt_handshake, agt_drv_handshake);
+		function new(input mailbox #(Transaction #(ADDRESS_WIDTH)) gen2agt, agt2drv, event gen_agt_handshake, agt_drv_handshake);
 			this.gen2agt = gen2agt;
 			this.agt2drv = agt2drv;
 			this.gen_agt_handshake = gen_agt_handshake;

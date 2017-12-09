@@ -12,12 +12,12 @@ package env_pkg;
 	//////////////////////////////////////////////////////////
 
 	class Environment #(ADDRESS_WIDTH);
-		Generator 	gen;
-		Agent 		agt;
-		Driver		drv;
-		mailbox #(Transaction) gen2agt, agt2drv;
+		Generator 	#(ADDRESS_WIDTH) gen;
+		Agent 		#(ADDRESS_WIDTH) agt;
+		Driver		#(ADDRESS_WIDTH) drv;
+		mailbox #(Transaction #(ADDRESS_WIDTH)) gen2agt, agt2drv;
 		event gen_agt_handshake, agt_drv_handshake;
-		virtual risc_spm_iface vif0 = $root.top.if0;
+		virtual risc_spm_iface #(ADDRESS_WIDTH) vif0 = $root.top.if0;
 
 
 		function void build();

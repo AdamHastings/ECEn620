@@ -4,9 +4,9 @@ package CovPort_pkg;
 	import Transaction_pkg::*;
 	import Driver_pkg::*;
 
-	Transaction drv_tr;
+	Transaction #(ADDRESS_WIDTH) drv_tr;
 
-	covergroup CovPort;
+	covergroup CovPort (int ADDRESS_WIDTH);
 		non_ctrl_opcodes : coverpoint drv_tr.opcode {
 			option.comment = "All opcodes have been executed, except BR, BRZ, and HALT";
 			bins nop_bin = {NOP};
@@ -70,7 +70,7 @@ package CovPort_pkg;
 		}
 
 		address_cov : coverpoint drv_tr.address {
-			option.auto_bin_max = 1 << (8);
+			option.auto_bin_max = 1 << (ADDRESS_WIDTH);
 		}
 
 		cross src_opcodes, drv_tr.src;
@@ -82,14 +82,14 @@ package CovPort_pkg;
 	endgroup
 
 
-	class Driver_cbs_cov extends Driver_cbs;
+	class Driver_cbs_cov #(ADDRESS_WIDTH) extends Driver_cbs #(ADDRESS_WIDTH);
 		CovPort ck;
 
 		function new();
 			ck = new();
 		endfunction
 
-		virtual task pre_tx(ref Transaction tr);
+		virtual task pre_tx(ref Transaction #(ADDRESS_WIDTH) tr);
 			drv_tr = tr;
 			ck.sample();
 			$display("%0d", $get_coverage());

@@ -4,27 +4,27 @@ package Driver_pkg;
 	import Transaction_pkg::*;
 
 	//Base callback class is an abstract class
-	virtual class Driver_cbs;
-		virtual task pre_tx(ref Transaction tr);
+	virtual class Driver_cbs #(ADDRESS_WIDTH);
+		virtual task pre_tx(ref Transaction #(ADDRESS_WIDTH) tr);
 			// By default, callback does nothing
 		endtask
 
-		virtual task post_tx(ref Transaction tr);
+		virtual task post_tx(ref Transaction #(ADDRESS_WIDTH) tr);
 			// By default, callback does nothing
 		endtask
 	endclass
 
 
-	class Driver;
-		Transaction tr;
-		mailbox #(Transaction) agt2drv;
+	class Driver #(ADDRESS_WIDTH);
+		Transaction #(ADDRESS_WIDTH) tr;
+		mailbox #(Transaction #(ADDRESS_WIDTH)) agt2drv;
 		event agt_drv_handshake;
 		string ASCII_op = "";
-		Driver_cbs cbs[$];
+		Driver_cbs #(ADDRESS_WIDTH) cbs[$];
 		virtual risc_spm_iface.TEST vif0;
 
 
-		function new(input mailbox #(Transaction) agt2drv, event agt_drv_handshake, input virtual risc_spm_iface.TEST vif0);
+		function new(input mailbox #(Transaction #(ADDRESS_WIDTH)) agt2drv, event agt_drv_handshake, input virtual risc_spm_iface #(ADDRESS_WIDTH).TEST vif0);
 			this.agt2drv = agt2drv;
 			this.agt_drv_handshake = agt_drv_handshake;
 			this.vif0 = vif0;

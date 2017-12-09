@@ -4,7 +4,7 @@ program automatic test();
 	import env_pkg::*;
 	import CovPort_pkg::*;
 	Environment #(ADDRESS_WIDTH) env;
-	Driver_cbs_cov dcc;
+	Driver_cbs_cov #(ADDRESS_WIDTH) dcc;
 
 	initial begin
 		env = new();
